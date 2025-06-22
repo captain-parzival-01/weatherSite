@@ -12,5 +12,8 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.10",
     "tailwindcss": "^4.1.10"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
   }
 }
