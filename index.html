@@ -6,26 +6,37 @@
     <title>Weather App | CapLabib</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body class="w-xl mx-auto ">
     <div>
-      <h1>Weather App by Cap Labib</h1>
+      <h1 class="mb-3">Weather App by <strong class="font-serif">Cap Labib</strong></h1>
     </div>
 
     <div
-      class="flex flex-col align-middle w-80 mx-auto p-3 rounded-xl bg-blue-100 shadow-md"
+      class="flex flex-col align-middle w-80 mx-auto p-3 rounded-xl bg-blue-100 shadow-md text-gray-600"
     >
       <div class="flex justify-center gap-3">
-        <input
-          placeholder="Search by city..."
+        <!-- <input
           type="text"
           id="cityNameInput"
           name="cityName"
           class="border-b-2 bg-blue-50 rounded-md pl-3"
+        /> -->
+
+        <input
+          id="cityNameInput"
+          placeholder="Search by city..."
+          class="border-b-2 bg-blue-50 rounded-md pl-3"
+          ...
         />
+        <ul
+          id="suggestions"
+          class="absolute w-full bg-white rounded mt-1 z-10 shadow hidden"
+        ></ul>
+
         <button
           id="js-search-btn"
           type="button"
-          class="cursor-pointer w-15 h-10 hover:bg-gray-400 rounded-md"
+          class="cursor-pointer w-15 h-10 hover:bg-blue-200 active:bg-violet-400 rounded-md"
         >
           <img
             src="./src/images/search-interface-symbol.png"
@@ -48,13 +59,13 @@
           class="w-24"
         />
         <p class="text-center" id="weatherText">Weather</p>
-        <p class="text-center text-2xl" id="weatherTempText">Temparature</p>
+        <p class="text-center text-2xl font-bold" id="weatherTempText">Temparature</p>
       </div>
 
       <div class="flex justify-around my-2">
         <div>
           <p class="text-center">Highest</p>
-          <p class="text-center " id="highestTempText">Temp</p>
+          <p class="text-center" id="highestTempText">Temp</p>
         </div>
         <div>
           <p class="text-center">Lowest</p>
