@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App | CapLabib</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Weather App by Cap Labib</h1>
+    </div>
+
+    <div
+      class="flex flex-col align-middle w-80 mx-auto p-3 rounded-xl bg-gray-200"
+    >
+      <div class="flex justify-center gap-3">
+        <input
+          type="text"
+          name="cityName"
+          id="cityNameInput"
+          class="border-b-2 bg-gray-100 rounded-md "
+        />
+        <button id="js-search-btn" type="button" class="cursor-pointer w-15 h-10 hover:bg-gray-400 rounded-md">
+          <img
+            src="./src/images/search-interface-symbol.png"
+            class="w-6 ml-4"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="flex flex-col w-auto mx-auto text-center">
+        <h2>Date</h2>
+        <h2>City</h2>
+      </div>
+
+      <div class="flex flex-col align-middle w-auto mx-auto my-2">
+        <img
+          src="./src/images/pngwing.com.png"
+          alt="weather icon"
+          class="w-24"
+        />
+        <p class="text-center">Weather</p>
+        <p class="text-center">Temparature</p>
+      </div>
+
+      <div class="flex justify-around my-2">
+        <div>
+          <p>Temp</p>
+          <p>Highest</p>
+        </div>
+        <div>
+          <p>Temp</p>
+          <p>Lowest</p>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </body>
+  <script src="./scripts/app.js"></script>
+</html>
