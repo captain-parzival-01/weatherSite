@@ -12,7 +12,6 @@ const lowestTemp = document.querySelector("#lowestTempText");
 let date = new dayjs();
 
 searchBtn.addEventListener("click", () => {
-  console.log("fatching");
   getWeatherData();
 });
 inputCity.addEventListener("keydown", (event) => {
@@ -28,18 +27,17 @@ async function getWeatherData() {
   let cityName = inputCity.value;
   
   let fetchData = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${
+    `https://api.openweathermap.org/data/2.5/weather?q=${
       cityName || "Dhaka"
     }&appid=4fa744968212805aba43213504b39bd1&units=metric`,
     {
       headers: {
-        Accept: "applicaiton/json",
+        Accept: "application/json",
       },
     }
   );
 
   let weather = await fetchData.json();
-  console.log(weather);
 
   dateText.textContent = date.format("dddd, D MMMM YYYY");
   cityNameText.textContent = weather.name;
@@ -49,7 +47,6 @@ async function getWeatherData() {
   highestTemp.textContent = `${weather.main.temp_max}°C`;
   lowestTemp.textContent = `${weather.main.temp_min}°C`;
 
-  console.log("done");
 }
 
 window.addEventListener("DOMContentLoaded", getWeatherData);
